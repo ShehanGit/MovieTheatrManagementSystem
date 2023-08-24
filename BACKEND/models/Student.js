@@ -15,7 +15,7 @@ const studentSchema = new Schema(
         },
 
         gender:{ 
-            type : Number,
+            type : String,
             //required:true
         },
 

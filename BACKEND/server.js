@@ -8,7 +8,7 @@ require('dotenv').config()
 const Student_routes = require('./routes/Students')
 //const todo_routes = require('./routes/todo.route')
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8086;
 
 app.use(cors())
 app.use(bodyParser.json())
