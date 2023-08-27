@@ -17,7 +17,7 @@ export default function AddStudent(){
             gender
         }
     
-        axios.post("http://localhost:8080/Student/add", newStudent).then(()=>{
+        axios.post("http://localhost:8086/Student/add", newStudent).then(()=>{
           alert("Student added");
         }).catch((err)=>{
           alert(err)
