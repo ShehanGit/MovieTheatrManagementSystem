@@ -4,21 +4,39 @@ const Schema = mongoose.Schema;
 
 const MovieSchema = new Schema(
     {
-        name :{ 
+        title:{ 
             type : String,
             required : true
         },
 
-        age:{ 
-            type : Number,
+        genre:{ 
+            type : String,
             required:true
         },
 
-        gender:{ 
+        director:{ 
             type : String,
             //required:true
         },
+        releaseDate:{ 
+            type : String,
+            required : true
+        },
 
+        languages:{ 
+            type : String,
+            required:true
+        },
+
+        runtime:{ 
+            type : Number,
+            //required:true
+        },
+        Rating:{ 
+            type : String,
+            //required:true
+        },
+        
 })
 
 const Movie = mongoose.model("Movie", MovieSchema);

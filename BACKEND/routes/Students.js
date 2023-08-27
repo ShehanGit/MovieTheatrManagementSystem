@@ -8,15 +8,23 @@ let Movie = require("../models/Movie");
 //Add student details
 router.route("/addMovie").post((req, res) => {
 
-    const name = req.body.name;
-    const age = req.body.age;
-    const gender = req.body.gender;
+    const title = req.body.title;
+    const genre = req.body.genre;
+    const director = req.body.director;
+    const releaseDate = req.body.releaseDate;
+    const languages = req.body.languages;
+    const runtime = req.body.runtime;
+    const Rating = req.body.Rating;
 
     const newStudent = new Movie (
         {
-            name,
-            age,
-            gender
+            title,
+            genre,
+            director,
+            releaseDate,
+            languages,
+            runtime,
+            Rating,
         })
     newStudent.save().then(()=>{
         res.json("Movie Added")
@@ -25,9 +33,6 @@ router.route("/addMovie").post((req, res) => {
     })
 })
 //http://localhost:8080/add
-
-
-
 
 module.exports = router;
 
