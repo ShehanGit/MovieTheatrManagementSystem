@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const studentSchema = new Schema(
+const MovieSchema = new Schema(
     {
         name :{ 
             type : String,
@@ -21,6 +21,5 @@ const studentSchema = new Schema(
 
 })
 
-const Student = mongoose.model("Student", studentSchema);
-
-module.exports = Student;
+const Movie = mongoose.model("Movie", MovieSchema);
+module.exports = Movie;

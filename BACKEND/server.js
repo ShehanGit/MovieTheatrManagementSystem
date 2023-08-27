@@ -5,8 +5,8 @@ const cors = require('cors')
 const app = express()
 require('dotenv').config()
 
-const Student_routes = require('./routes/Students')
-//const todo_routes = require('./routes/todo.route')
+const Movie_routes = require('./routes/Students')
+
 
 const PORT = process.env.PORT || 8086;
 
@@ -26,7 +26,7 @@ connection.once("open", () => {
 })
 
 // routes
- app.use('/Student', Student_routes)//
+ app.use('/Movie', Movie_routes)//
  
 // app.use('/todo', todo_routes)
 
