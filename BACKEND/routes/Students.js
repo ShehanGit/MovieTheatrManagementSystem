@@ -59,7 +59,7 @@ router.route("/update/:id").put(async (req, res) => {
     };
 
     try {
-        const update = await Student.findByIdAndUpdate(userId, updateMovie);
+        const update = await Movie.findByIdAndUpdate(userId, updateMovie);
         res.status(200).send({ status: "user updated" });
     } catch (err) {
         console.log(err);
