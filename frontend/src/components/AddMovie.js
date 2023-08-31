@@ -12,6 +12,7 @@ export default function AddMovie(){
     const [runtime, setRuntime] = useState("");
     const [Rating, setRating] = useState("");
 
+    // This will exicute after click submit button
     function SendData(e){      
         e.preventDefault();
 
