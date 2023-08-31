@@ -6,7 +6,7 @@ export default function AllStudent(){
         const [students, setStudents] = useState([]); 
         useEffect(() => {
                 function getStudent(){
-                    axios.get("http://localhost:8080/Student/").then((res)=> {
+                    axios.get("http://localhost:8086/Student/").then((res)=> {
                         console.log(res.data); 
                         //setStudents(res.data);
                     }).catch((err) => {
