@@ -39,5 +39,5 @@ const MovieSchema = new Schema(
         
 })
 
-const Movie = mongoose.model("Movie", MovieSchema);
+const Movie = mongoose.model("Movie", MovieSchema);// add 1
 module.exports = Movie;
