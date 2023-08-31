@@ -1,7 +1,7 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "Movie Theatr Management System",
+  "description": "Movie Theater Management System",
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
@@ -16,6 +16,7 @@
     "mongoose": "^7.4.1"
   },
   "devDependencies": {
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.0.1",
+    "@babel/plugin-proposal-private-property-in-object": "^1.0.0"
   }
 }
