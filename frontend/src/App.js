@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from './components/Header';
-import AddStudent from './components/AddStudent';
 import AllStudent from './components/AllStudents';
+import AddMovie from "./components/AddMovie";
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
         <Header />
 
         <Routes>
-          <Route path="/add" exact element={<AddStudent />} />
+          <Route path="/addMovie" exact element={<AddMovie />} />
           <Route path="/" exact element={<AllStudent />} />
         </Routes>
       </div>
