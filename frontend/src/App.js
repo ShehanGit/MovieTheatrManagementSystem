@@ -11,8 +11,8 @@ function App() {
         <Header />
 
         <Routes>
-          <Route path="/addMovie" exact element={<AddMovie />} />
-          <Route path="/" exact element={<AllStudent />} />
+          <Route path="/addMovie" exact element={<AddMovie />} /> 
+          <Route path="/" exact element={<AllStudent />} />{/*we write exact eod for only display path=/ for exact /*/}
         </Routes>
       </div>
     </Router>
