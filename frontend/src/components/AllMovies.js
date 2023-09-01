@@ -20,11 +20,12 @@ export default function AllMovies() {
     getMovies();
   }, []);
 
-  const onDeleteClick = async (id) => {
+  
+  const onDeleteClick = async (_id) => {
     try {
-      await handleDelete(id);
+      await handleDelete(_id);
       // Remove the deleted movie from the state
-      setMovies((prevMovies) => prevMovies.filter((movie) => movie.id !== id));
+      setMovies((prevMovies) => prevMovies.filter((movie) => movie._id !== _id));
     } catch (error) {
       alert(error.message); // Handle the error as needed
     }
@@ -46,21 +47,22 @@ export default function AllMovies() {
           <th>Rating</th>
         </tr>
         {/* Map over the Movies state */}
-        {Movies.map((i) => {
-          return (
-            <tr key={i.id}>
-              <td>{i.id}</td>
-              <td>{i.title}</td>
-              <td>{i.genre}</td>
-              <td>{i.director}</td>
-              <td>{i.releaseDate}</td>
-              <td>{i.languages}</td>
-              <td>{i.runtime}</td>
-              <td>{i.rating}</td>
-              <td><button onClick={() => onDeleteClick(i.id)}>Delete</button></td>
+        {Movies.map((movie) => (
+            <tr key={movie._id}>
+              <td>{movie._id}</td>
+              <td>{movie.title}</td>
+              <td>{movie.genre}</td>
+              <td>{movie.director}</td>
+              <td>{movie.releaseDate}</td>
+              <td>{movie.languages}</td>
+              <td>{movie.runtime}</td>
+              <td>{movie.rating}</td>
+              <td>
+                {}
+                <button onClick={() => onDeleteClick(movie._id)}>Delete</button>
+              </td>
             </tr>
-          );
-        })}
+          ))}
       </table>
     </div>
     </div>

@@ -17,6 +17,9 @@ function Header() {
         <li className="nav-item">
           <Link to ="/addMovie" className="nav-link active"> Add Movie </Link>
         </li>
+        <li className="nav-item">
+          <Link to ="/updateMovie" className="nav-link active"> Update Movie </Link>
+        </li>
 
       </ul>
     </div>
