@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import "./CSS/AllMovies.css";
+import { handleDelete } from "./DeleteMovie";
 
 export default function AllMovies() {
   const [Movies, setMovies] = useState([]); // Define the state as Movies
@@ -18,11 +20,23 @@ export default function AllMovies() {
     getMovies();
   }, []);
 
+  const onDeleteClick = async (id) => {
+    try {
+      await handleDelete(id);
+      // Remove the deleted movie from the state
+      setMovies((prevMovies) => prevMovies.filter((movie) => movie.id !== id));
+    } catch (error) {
+      alert(error.message); // Handle the error as needed
+    }
+  };
+
   return (
     <div>
       <h1>All Movies</h1>
+      <div className="cont">
       <table border="1">
         <tr>
+          <th>ID</th>
           <th>title</th>
           <th>genre</th>
           <th>director</th>
@@ -35,6 +49,7 @@ export default function AllMovies() {
         {Movies.map((i) => {
           return (
             <tr key={i.id}>
+              <td>{i.id}</td>
               <td>{i.title}</td>
               <td>{i.genre}</td>
               <td>{i.director}</td>
@@ -42,10 +57,12 @@ export default function AllMovies() {
               <td>{i.languages}</td>
               <td>{i.runtime}</td>
               <td>{i.rating}</td>
+              <td><button onClick={() => onDeleteClick(i.id)}>Delete</button></td>
             </tr>
           );
         })}
       </table>
+    </div>
     </div>
   );
 }
