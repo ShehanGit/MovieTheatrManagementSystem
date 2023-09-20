@@ -58,6 +58,7 @@ export default function AllMovies() {
               <td>{i.runtime}</td>
               <td>{i.rating}</td>
               <td><button onClick={() => onDeleteClick(i._id)}>Delete</button></td>
+              <td><button onClick={() => onDeleteClick(i._id)}>Update</button></td>
             </tr>
           );
         })}
