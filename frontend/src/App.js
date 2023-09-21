@@ -1,8 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from './components/Header';
-import AllStudent from './components/AllStudents';
 import AddMovie from "./components/AddMovie";
+import AllMovies from "./components/AllMovies";
+import UpdateMovie from "./components/UpdateMovie";
 
 function App() {
   return (
@@ -11,8 +12,9 @@ function App() {
         <Header />
 
         <Routes>
-          <Route path="/addMovie" exact element={<AddMovie />} />
-          <Route path="/" exact element={<AllStudent />} />
+          <Route path="/addMovie" exact element={<AddMovie />} /> {/*we write exact eod for only display path=/ for exact /*/}
+          <Route path="/" exact element={<AllMovies />} />
+          <Route path="/updateMovie/:userId" element={<UpdateMovie />} />
         </Routes>
       </div>
     </Router>
