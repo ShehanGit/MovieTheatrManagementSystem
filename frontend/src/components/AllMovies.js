@@ -36,29 +36,31 @@ export default function AllMovies() {
       <div className="cont">
         <table border="1">
           <tr>
-            <th>ID</th>
-            <th>title</th>
-            <th>genre</th>
-            <th>director</th>
-            <th>releaseDate</th>
-            <th>languages</th>
-            <th>runtime</th>
+             {/*<th>ID</th>*/}
+            <th>Title</th>
+            <th>Genre</th>
+            <th>Director</th>
+            <th>ReleaseDate</th>
+            <th>Languages</th>
+            <th>Runtime</th>
             <th>Rating</th>
+            <th></th>
+            <th></th>
           </tr>
           {/* Map over the Movies state */}
           {Movies.map((i) => {
             return (
               <tr key={i._id}>
-                <td>{i._id}</td>
+                {/*<td>{i._id}</td>*/}
                 <td>{i.title}</td>
                 <td>{i.genre}</td>
                 <td>{i.director}</td>
                 <td>{i.releaseDate}</td>
                 <td>{i.languages}</td>
                 <td>{i.runtime}</td>
-                <td>{i.rating}</td>
-                <td><button onClick={() => onDeleteClick(i._id)}>Delete</button></td>
-                <td><a href={'/updateMovie/' + i._id}><button>Update</button></a></td>
+                <td>{i.Rating}</td>
+                <td><button className="button4" onClick={() => onDeleteClick(i._id)}>Delete</button></td>
+                <td><a href={'/updateMovie/' + i._id}><button className="button5">Update</button></a></td>
               </tr>
             );
           })}
