@@ -97,47 +97,57 @@ export default function UpdateMovie() {
         <div className="container" >
             <div className="min-h-screen flex justify-center items-center bg-gray-100">
                 <div className="bg-white p-6 rounded shadow-lg max-w-md w-full">
-                    <h1 className="text-3xl font-bold text-center text-primary mb-6">Update User Details</h1>
+                    <h1 className="text-3xl font-bold text-center text-primary mb-6">Update Movie Details</h1>
                     <form className="space-y-4" onSubmit={handleSubmit} >
                         <div className="grid grid-cols-2 gap-4">
-                            <div>
-                                <label htmlFor="firstName" className="block text-sm font-medium text-gray-700">
-                                    First Name
+                            <div className="mb-3">
+                                <label htmlFor="firstName" className="form-label" >
+                                Title
                                 </label>
                                 <input
                                     type="text"
                                     id="firstName"
-                                    className="mt-1 block w-full py-2 px-3 rounded-md focus:ring focus:ring-opacity-50 focus:ring-blue-400 focus:border-blue-400"
+
                                     placeholder="First Name"
+                                    className="form-control"
                                     value={title}
                                     onChange={(e) => setTitle(e.target.value)}
 
                                 />
                             </div>
-                            <div>
-                                <label htmlFor="lastName" className="block text-sm font-medium text-gray-700">
-                                    Last Name
-                                </label>
-                                <input
-                                    type="text"
-                                    id="lastName"
-                                    className="mt-1 block w-full py-2 px-3 rounded-md focus:ring focus:ring-opacity-50 focus:ring-blue-400 focus:border-blue-400"
-                                    placeholder="Last Name"
-                                    value={genre}
-                                    onChange={(e) => setGenre(e.target.value)}
 
-                                />
-                            </div>
+
+                            <div className="mb-3">
+
+                            <label htmlFor="languages" className="form-label">Genre</label>
+                                <select
+                                        className="form-select"
+                                        id="genre"
+                                            onChange={(e) => {
+                                        setGenre(e.target.value);
+                                        }}
+                            >
+                                <option value="Action">Action</option>
+                                <option value="Adventure">Adventure</option>
+                                <option value="Comedy">Comedy</option>
+                                <option value="Drama">Drama</option>
+                                <option value="Horror">Horror</option>
+                                <option value="Science Fiction">Science Fiction</option>
+                        </select>
+                        </div>
+
+  
+                            
                         </div>
                         <div>
-                            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                                Email
+                            <label  htmlFor="email" className="block text-sm font-medium text-gray-700">
+                            Director
                             </label>
                             <input
                                 type="text"
                                 id="email"
-                                className="mt-1 block w-full py-2 px-3 rounded-md focus:ring focus:ring-opacity-50 focus:ring-blue-400 focus:border-blue-400"
                                 placeholder="Email"
+                                className="form-control"
                                 value={director}
                                 onChange={(e) => setDirector(e.target.value)}
 
@@ -145,13 +155,13 @@ export default function UpdateMovie() {
                         </div>
                         <div>
                             <label htmlFor="age" className="block text-sm font-medium text-gray-700">
-                                Age
+                            Release Date
                             </label>
                             <input
                                 type="text"
                                 id="age"
-                                className="mt-1 block w-full py-2 px-3 rounded-md focus:ring focus:ring-opacity-50 focus:ring-blue-400 focus:border-blue-400"
                                 placeholder="Age"
+                                className="form-control"
                                 value={releaseDate}
                                 onChange={(e) => setReleaseDate(e.target.value)}
 
@@ -159,63 +169,54 @@ export default function UpdateMovie() {
                         </div>
                         <div>
                             <label htmlFor="dob" className="block text-sm font-medium text-gray-700">
-                                Date of Birth
+                            Languages
                             </label>
                             <input
                                 type="text"
                                 id="dob"
-                                className="mt-1 block w-full py-2 px-3 rounded-md focus:ring focus:ring-opacity-50 focus:ring-blue-400 focus:border-blue-400"
                                 value={languages}
                                 onChange={(e) => setLanguages(e.target.value)}
+                                className="form-control"
 
                             />
                         </div>
                         <div>
                             <label htmlFor="" className="block text-sm font-medium text-gray-700">
-                                Role
+                            Runtime
                             </label>
                             <input
                                 type="text"
                                 id="role"
-                                className="mt-1 block w-full py-2 px-3 rounded-md focus:ring focus:ring-opacity-50 focus:ring-blue-400 focus:border-blue-400"
                                 placeholder="Role"
                                 value={runtime}
                                 onChange={(e) => setRuntime(e.target.value)}
+                                className="form-control"
 
                             />
                         </div>
                         <div>
                             <label htmlFor="" className="block text-sm font-medium text-gray-700">
-                                Role
+                            Rating
                             </label>
                             <input
                                 type="text"
                                 id="role"
-                                className="mt-1 block w-full py-2 px-3 rounded-md focus:ring focus:ring-opacity-50 focus:ring-blue-400 focus:border-blue-400"
                                 placeholder="Role"
                                 value={Rating}
                                 onChange={(e) => setRating(e.target.value)}
+                                className="form-control"
 
                             />
                         </div>
                         <div>
                             <button
                                 type="submit"
-                                className="w-full bg-blue-500 text-white rounded-md py-2 px-3 focus:ring focus:ring-opacity-50 focus:ring-blue-400 hover:bg-blue-600"
+                                className="button6"
                             >
                                 Update
                             </button>
                         </div>
-                        <div>
-                            <button
-
-
-                                type="button"
-                                className="w-full bg-blue-500 text-white rounded-md py-2 px-3 focus:ring focus:ring-opacity-50 focus:ring-blue-400 hover:bg-blue-600"
-                            >
-                                Cancel
-                            </button>
-                        </div>
+                        
                     </form>
                 </div>
             </div>

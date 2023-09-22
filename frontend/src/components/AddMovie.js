@@ -34,7 +34,7 @@ export default function AddMovie(){
     }
   
     return(
-    <div className="container" >
+    <div className="container1" >
         <br/>
         <br/>
         <form onSubmit = {SendData}>
@@ -44,12 +44,25 @@ export default function AddMovie(){
             setTitle(e.target.value);
     }}/>
   </div>
+
   <div className="mb-3">
-    <label for="genre" className="form-label">Genre</label>
-    <input type="text" className="form-control" id="genre" onChange={(e)=>{
-            setGenre(e.target.value);
-    }}/>
+    <label htmlFor="languages" className="form-label">Genre</label>
+    <select
+        className="form-select"
+        id="genre"
+        onChange={(e) => {
+          setGenre(e.target.value);
+        }}
+    >
+        <option value="Action">Action</option>
+        <option value="Adventure">Adventure</option>
+        <option value="Comedy">Comedy</option>
+        <option value="Drama">Drama</option>
+        <option value="Horror">Horror</option>
+        <option value="Science Fiction">Science Fiction</option>
+    </select>
   </div>
+
   <div className="mb-3">
     <label for="director" className="form-label">Director</label>
     <input type="text" className="form-control" id="director" onChange={(e)=>{
@@ -57,32 +70,46 @@ export default function AddMovie(){
     }}/>
   </div>
   <div className="mb-3">
-    <label for="releasedate" className="form-label">releaseDate</label>
-    <input type="text" className="form-control" id="releasedate" aria-describedby="emailHelp" onChange={(e)=>{
+    <label for="releasedate" className="form-label">Release Date</label>
+    <input type="date" className="form-control" id="releasedate" aria-describedby="emailHelp" onChange={(e)=>{
             setReleaseDate(e.target.value);
     }}/>
   </div>
+
+
   <div className="mb-3">
-    <label for="languages" className="form-label">Languages</label>
-    <input type="text" className="form-control" id="languages" onChange={(e)=>{
+    <label htmlFor="languages" className="form-label">Languages</label>
+    <select
+        className="form-select"
+        id="languages"
+        onChange={(e) => {
             setLanguages(e.target.value);
-    }}/>
-  </div>
+        }}
+    >
+        <option value="English">English</option>
+        <option value="Sinhala">Sinhala</option>
+        <option value="Tamil">Tamil</option>
+        <option value="Hindi">Hindi</option>
+    </select>
+</div>
+
+
   <div className="mb-3">
     <label for="runtime" className="form-label">Runtime</label>
-    <input type="text" className="form-control" id="runtime" onChange={(e)=>{
+    <input type="number" className="form-control" id="runtime" onChange={(e)=>{
             setRuntime(e.target.value);
     }}/>  
   </div>
 
   <div className="mb-3">
     <label for="rating" className="form-label">Rating</label>
-    <input type="text" className="form-control" id="rating" onChange={(e)=>{
+    <input type="number" className="form-control" id="rating" onChange={(e)=>{
             setRating(e.target.value);
     }}/>  
   </div>
 
-  <button type="submit" className="btn btn-primary">Submit</button>
+
+  <button type="submit" className="btn2">Submit</button>
 </form>
     </div>
     )

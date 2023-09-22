@@ -32,15 +32,16 @@ export default function AllMovies() {
 
   return (
     <div>
-      <h1>All Movies</h1>
-      <div className="cont">
+
+      <div className="cont">        
+       <a href={'/addMovie'}><button className="button7">Add Movie</button></a>
         <table border="1">
           <tr>
              {/*<th>ID</th>*/}
             <th>Title</th>
             <th>Genre</th>
             <th>Director</th>
-            <th>ReleaseDate</th>
+            <th>Release Date</th>
             <th>Languages</th>
             <th>Runtime</th>
             <th>Rating</th>
@@ -59,12 +60,14 @@ export default function AllMovies() {
                 <td>{i.languages}</td>
                 <td>{i.runtime}</td>
                 <td>{i.Rating}</td>
-                <td><button className="button4" onClick={() => onDeleteClick(i._id)}>Delete</button></td>
-                <td><a href={'/updateMovie/' + i._id}><button className="button5">Update</button></a></td>
+                <td><button className="button5" onClick={() => onDeleteClick(i._id)}>Delete</button></td>
+                <td><a href={'/updateMovie/' + i._id}><button className="button4">Update</button></a></td>
               </tr>
             );
           })}
         </table>
+
+
       </div>
     </div>
   );

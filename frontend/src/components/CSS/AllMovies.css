@@ -1,6 +1,8 @@
 table {
+    border-radius: 10px;
     border-collapse: collapse;
     width: 90%;
+    
     
   }
   
@@ -49,4 +51,48 @@ table {
     padding: 4px 20px;
     cursor: pointer;
     border-radius: 5px;
+}
+
+.button6{
+
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding-top: 100px;
+  padding: 8px 40px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 50px;
+}
+
+.container1{
+  width:80%;
+  padding-left: 200px;
+  
+}
+
+.btn2{
+  
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding-top: 100px;
+  padding: 10px 80px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 50px;
+  margin-bottom: 200px;
+}
+
+.button7{
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding-top: 10px;
+  padding: 10px 80px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 50px;
+  position: relative;
+  left: 1100px;
 }
