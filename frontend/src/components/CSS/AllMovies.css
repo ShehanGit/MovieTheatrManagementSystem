@@ -96,3 +96,53 @@ table {
   position: relative;
   left: 1100px;
 }
+/* Home page CSS */
+
+.cont{
+  margin-top: -50px;
+    display: flex;
+    height: 500px;
+    border: 2px solid #000;
+}
+
+.cont1{
+    width: 35%;
+    height: 100%;
+
+}
+
+.cont2{
+  width: 65%;
+  height: 100%;
+
+}
+
+.ima{
+  border-radius: 20px;
+  margin-right: 20px;
+}
+
+.h1{
+  font-size: 50px;
+  position: relative;
+  top:300px;
+  left: 80px;
+}
+
+/*movie List*/
+
+.contn{
+  margin-top: 120px;
+  height: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  border: 2px solid #000;
+
+}
+.contn1{
+  height: 300px;
+  width: 18%;
+  border: 2px solid #000;
+
+}
