@@ -33,7 +33,7 @@ export default function AllMovies() {
   return (
     <div>
 
-      <div className="cont">        
+      <div className="contA">        
        <a href={'/addMovie'}><button className="button7">Add Movie</button></a>
         <table border="1">
           <tr>
