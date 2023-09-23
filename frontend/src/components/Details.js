@@ -1,11 +1,6 @@
 import React, {useState} from "react";
 import axios from "axios";
-import mainp from './Images/main.jpeg';
-import pic1 from './Images/p1.jpeg'
-import pic2 from './Images/p2.jpeg';
-import pic3 from './Images/p3.jpeg';
-import pic4 from './Images/p4.jpeg';
-import pic5 from './Images/p5.jpeg';
+
 
 
 export default function DetailsM(){
