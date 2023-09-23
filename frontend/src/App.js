@@ -5,6 +5,7 @@ import AddMovie from "./components/AddMovie";
 import AllMovies from "./components/AllMovies";
 import UpdateMovie from "./components/UpdateMovie";
 import HomeMain from "./components/Home";
+import DetailsM from "./components/Details";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" exact element={<AllMovies />} />
           <Route path="/updateMovie/:userId" element={<UpdateMovie />} />
           <Route path="/Home" element={<HomeMain />} />
+          <Route path="/Details" element={<DetailsM />} />
         </Routes>
       </div>
     </Router>
