@@ -95,7 +95,7 @@ export default function UpdateMovie() {
 
     return (
         <div>
-        <Link to="/Details">
+        <Link to="/">
         <img className="ima4" src={"https://www.freeiconspng.com/thumbs/return-button-png/back-undo-return-button-png-5.png"} alt="My Image" width="50px" height= "50px" />
          </Link>
 
