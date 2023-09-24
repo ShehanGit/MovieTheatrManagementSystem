@@ -94,6 +94,12 @@ export default function UpdateMovie() {
 
 
     return (
+        <div>
+        <Link to="/Details">
+        <img className="ima4" src={"https://www.freeiconspng.com/thumbs/return-button-png/back-undo-return-button-png-5.png"} alt="My Image" width="50px" height= "50px" />
+         </Link>
+
+
         <div className="container" >
             <div className="min-h-screen flex justify-center items-center bg-gray-100">
                 <div className="bg-white p-6 rounded shadow-lg max-w-md w-full">
@@ -220,6 +226,7 @@ export default function UpdateMovie() {
                     </form>
                 </div>
             </div>
+        </div>
         </div>
     )
 }

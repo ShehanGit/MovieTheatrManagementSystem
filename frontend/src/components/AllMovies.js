@@ -33,6 +33,8 @@ export default function AllMovies() {
   return (
     <div>
 
+      <img className="ima4" src={"https://www.freeiconspng.com/thumbs/return-button-png/back-undo-return-button-png-5.png"} alt="My Image" width="50px" height= "50px" />
+
       <div className="contA">        
        <a href={'/addMovie'}><button className="button7">Add Movie</button></a>
         <table border="1">

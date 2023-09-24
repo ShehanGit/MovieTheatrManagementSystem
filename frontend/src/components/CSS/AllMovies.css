@@ -27,7 +27,7 @@ table {
   .contA{
 
     position: relative;
-    top: 60px;
+    top: 0px;
     padding-left: 40px;
 
   }
@@ -426,4 +426,9 @@ table {
     margin-right:0;
     font-weight:600
   }
+}
+
+.ima4{
+  margin-left: 30px;
+  margin-top: 10px;
 }
