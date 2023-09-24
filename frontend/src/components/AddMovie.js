@@ -32,12 +32,9 @@ export default function AddMovie() {
       return;
     }
 
-    if ( (runtime > 0 ) ) {
-      setError("Enter valid runtime ");
-      return;
-    }
 
-    if ( !(Rating <= 5 && (Rating < 0 )) ) {
+
+    if ( !(Rating <= 5 ))  {
       setError("Enter rating between 0 - 5 ");
       return;
     }
